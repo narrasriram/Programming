@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if(len(s)!=len(t)):
+            return bool(len(s)==len(t))
+        else:
+            s_dictionary = {}
+            t_dictionary = {}
+            for i in s:
+                if(i not in s_dictionary):
+                    s_dictionary[i] = s.count(i)
+                    t_dictionary[i] = t.count(i)
+                else:
+                    pass
+            return bool(s_dictionary==t_dictionary)
